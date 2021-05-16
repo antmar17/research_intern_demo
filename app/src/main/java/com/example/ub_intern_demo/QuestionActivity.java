@@ -87,7 +87,7 @@ public class QuestionActivity extends AppCompatActivity {
         progressBar.setVisibility(View.VISIBLE);
         FirebaseDatabase.getInstance().getReference("Users")
                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                .child("Grade").setValue(grade).addOnCompleteListener(new OnCompleteListener<Void>() {
+                .child("grade").setValue(grade).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
