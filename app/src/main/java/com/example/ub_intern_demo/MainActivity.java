@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Authp for firebase
         mAuth = FirebaseAuth.getInstance();
-        createRequest();
+       // createRequest();
 
 
         googlebtn.setOnClickListener(new View.OnClickListener() {
@@ -165,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void googleLogin() {
+        createRequest();
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
     }

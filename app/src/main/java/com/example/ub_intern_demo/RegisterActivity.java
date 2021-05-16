@@ -1,5 +1,6 @@
 package com.example.ub_intern_demo;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -25,7 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
     final String TAG = "RegisterActivity";
     private FirebaseAuth mAuth;
     private EditText email_et, password_et,name_et;
-    private Button register_btn;
+    private Button register_btn, backButton;
     private ProgressBar progressBar;
 
     @Override
@@ -39,6 +40,12 @@ public class RegisterActivity extends AppCompatActivity {
         password_et = findViewById(R.id.password_edittxt);
         register_btn = findViewById(R.id.register_btn);
         progressBar = findViewById(R.id.progress_bar);
+        backButton = findViewById(R.id.back_btn);
+        backButton.setOnClickListener(v->{
+
+            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(intent);
+        });
         mAuth = FirebaseAuth.getInstance();
 
         register_btn.setOnClickListener( v->{
