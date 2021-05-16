@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".RecordActivity">
+<TextView
+    android:id="@+id/title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:textSize="25dp"
+    android:text="Read the sentence \n'Glad to meet you'"
+    android:textColor="@color/black"
+
+    ></TextView>
+
+    <ToggleButton
+        android:id="@+id/toggle_record_btn"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:layout_below="@+id/title"
+        android:textOff="start Recording"
+        android:textOn="stop Recording"
+        android:text="ToggleButton"
+        android:textSize="20dp"
+        android:visibility="visible" />
+
+
+    <Button
+        android:id="@+id/play_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toggle_record_btn"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+
+        android:text="Play audio" />
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/play_btn"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:text="Submit" />
+
+
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submit_btn"
+        android:layout_marginTop="100dp"
+        android:text="Back to Menu" />
+
+    <TextView
+        android:id="@+id/status_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="text here"
+        android:visibility="gone"
+        android:textSize="20dp"
+        android:textColor="#009900"
+        android:layout_below="@+id/submit_btn"
+        >
+
+
+    </TextView>
+
+
+
+
+
+</RelativeLayout>
+
